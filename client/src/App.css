@@ -3,6 +3,7 @@
   min-width: 100vw;
   background-color: #282c34;
   color: white;
+  overflow: hidden;
 }
 
 .App-header {
@@ -15,11 +16,12 @@
 }
 
 .App-main{
-  /* max-height: 90vh; */
   max-width: 100vw;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .App-logo {

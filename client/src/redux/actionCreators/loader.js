@@ -10,7 +10,7 @@ const removeLoader = () => {
     type: REMOVE_LOADER 
   }
 }
-export   {
+export {
   addLoader,
   removeLoader
 }

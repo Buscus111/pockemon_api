@@ -19,11 +19,12 @@ function Header() {
         <img src={logo} className="App-logo" alt="logo" />
       </div>
       <div className="name-wrapper">
-        <h1>Pockemon Universe</h1>
+        <h1>Pockemons Universe</h1>
       </div>
       <div className="navbar-wrapper">
         <nav className="App-nav">
-          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/cards">Pockemons</NavLink>
+          <NavLink to="/">Home</NavLink>
           <NavLink to="/info">Info</NavLink>
         </nav>
       </div>
