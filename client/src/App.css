@@ -15,7 +15,7 @@
 }
 
 .App-main{
-  max-height: 90vh;
+  /* max-height: 90vh; */
   max-width: 100vw;
   overflow: hidden;
   display: flex;
