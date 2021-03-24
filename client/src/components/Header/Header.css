@@ -1,0 +1,11 @@
+.logo-wrapper{
+  width: 25vw;
+}
+.name-wrapper{
+  width: 50vw;
+  text-align: center;
+}
+.navbar-wrapper{
+  width: 25vw;
+  text-align: end;
+}
