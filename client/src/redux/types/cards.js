@@ -1,1 +1,2 @@
 export const ADD_ALL_CARDS = "ADD_ALL_CARDS";
+export const ADD_CURRENT_CARD = "ADD_CURRENT_CARD";

@@ -1,29 +1,27 @@
-import { Link, useParams } from 'react-router-dom'
+import './CardInfo.css'
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 
-const NavLink = styled(Link)`
-  margin: 1vh;
-  color: white;
-  text-decoration: none;
-  &:hover{
-    border-bottom: 1px solid white; 
-  }
-`;
+const OneCardWrapper = styled.div`{
+  width: 40vw;
+  hieght: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}`
 
 function CardInfo() {
-  const { id } = useParams();
-  const cards = useSelector(state => state.cards);
-  const card = cards.filter(el => el.id === id)[0];
-  console.log(card)
+  const currentCard = useSelector(state => state.currentCard);
+  //можно было выводить инфу всю вместо карточки, но на карточке и так все расписанно. 
   return (
-    <div>
-      <NavLink to="/cards">Back</NavLink>
-      <div>{card.imageUrl}</div>
-      <div>{card.name}</div>
-      <div>{card.hp}</div>
-      <div></div>
-    </div>
+    <OneCardWrapper>
+      <img className="current-card-img" src={currentCard?.imageUrlHiRes} alt=""/>
+      <Link to="/cards">
+        <button  type="button" className="btn btn-light mt-5">Back</button>
+      </Link>
+    </OneCardWrapper>
   )
 }
 

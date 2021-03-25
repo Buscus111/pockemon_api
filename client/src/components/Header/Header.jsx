@@ -21,13 +21,11 @@ function Header() {
       <div className="name-wrapper">
         <h1>Pockemons Universe</h1>
       </div>
-      <div className="navbar-wrapper">
-        <nav className="App-nav">
-          <NavLink to="/cards">Pockemons</NavLink>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/info">Info</NavLink>
-        </nav>
-      </div>
+      <nav className="navbar-wrapper">
+        <NavLink to="/cards">Pockemons</NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/info">Info</NavLink>
+      </nav>
       </header>
   )
 }

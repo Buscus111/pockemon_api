@@ -1,9 +1,7 @@
 import styled from 'styled-components'
-import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import getAllPockemonsThunk from '../../redux/thunks/getAllPockemons'
 import Card from '../Card/Card'
-import { addLoader, removeLoader } from '../../redux/actionCreators/loader'
 
 const CharactersCardsDiv = styled.div`{
   width: 80vw;
@@ -16,29 +14,18 @@ const CharactersCardsDiv = styled.div`{
 function CardsList() {
   const dispatch = useDispatch()
   const cards = useSelector(state => state.cards)
-  const [count, setCount] = useState(9)
-
-  console.log(count)
 
   const hadlerUpdate = () => {
-    dispatch(addLoader())
-    setTimeout(() => {
-      dispatch(removeLoader())
-    }, 1000);
-    setCount(Math.floor(Math.random() * 90  + 9))
-  }
-
-  useEffect(() => {
     dispatch(getAllPockemonsThunk())
-  }, [])
+  }
 
   
   return (
     <>
-    <button onClick={hadlerUpdate}>New Pockemons!</button>
+    <button onClick={hadlerUpdate} type="button" className="btn btn-light">Get Pockemons!</button>
     <CharactersCardsDiv>
       {
-        cards && cards.map((el, i) => (i >= count - 9) && (i <= count) ? <Card key={el.id} card={el}/> : null  )
+        cards && cards.map((el, i) => <Card key={el.id} card={el}/> )
       }
     </CharactersCardsDiv>
     </>

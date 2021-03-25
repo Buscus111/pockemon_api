@@ -1,5 +1,6 @@
 .card-img{
-  width: 18vw;
+  width: 8vw;
+  /* width: 114px; */
   transition: all .5s ease-in-out;
 }
 

@@ -1,6 +1,7 @@
 const initState = {
   loader: false,
-  cards: []
+  cards: [],
+  currentCard: {}
 }
 
 export default  initState;

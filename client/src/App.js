@@ -4,17 +4,16 @@ import Header from './components/Header/Header'
 import CardsList from './components/CardsList/CardsList'
 import CardInfo from './components/CardInfo/CardInfo'
 import Info from './components/Info/Info'
+import Loader from './components/Loader/Loader'
 import { useSelector } from 'react-redux'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import LoaderReact from './components/Loader/LoaderReact'
 
 function App() {
   const loader = useSelector(state => state.loader)
-  console.log(loader)
   return (
     <Router>
     <div className="App">
@@ -22,7 +21,7 @@ function App() {
       <main className="App-main">
         {
             loader ? 
-            <LoaderReact /> :
+            <Loader /> :
             <Switch>
               <Route exact path="/">
                 <Home />
